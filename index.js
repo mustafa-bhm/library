@@ -44,7 +44,7 @@ function renderLibrary(addNewBookBool) {
     btn.className += myLibrary[i].index;
     title.textContent = "Title: " + myLibrary[i].title;
     btn.textContent = "X";
-    read.textContent = "read " + myLibrary[i].isRead;
+    read.textContent = "Status " + myLibrary[i].isRead;
 
     // append book info elemnts to the card contanier
     bookCard.appendChild(btn);

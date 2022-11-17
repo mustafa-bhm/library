@@ -8,27 +8,32 @@
     <title>Library</title>
   </head>
   <body>
-    <h1>My library</h1>
-    <div class="form">
-      <label>Title</label>
-      <input type="text" id="title" name="title" placeholder="Book title" />
-      <label>Author</label>
-      <input
-        type="text"
-        id="author"
-        name="author"
-        placeholder="Author's name"
-      />
+    <div class="global-container">
+      <div class="form">
+        <h1>My library</h1>
+        <label>Title:</label>
+        <input type="text" id="title" name="title" placeholder=" Book title" />
+        <label>Author:</label>
+        <input
+          type="text"
+          id="author"
+          name="author"
+          placeholder=" Author's name"
+        />
 
-      <label>Did you read this book ?</label>
-      <select id="isRead" name="isRead">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
-      </select>
-      <button class="button add">Add this book</button>
+        <label>Did you read this book ?</label>
+        <select id="isRead" name="isRead" class="input">
+          <option value="">Select an option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+        <button class="button add">Add this book</button>
+      </div>
+      <div>
+        <div class="library"></div>
+        <footer class="footer">By Mustafa for The Odin Project 2022</footer>
+      </div>
     </div>
-    <div class="library"></div>
-    <footer class="footer">By Mustafa for The Odin Project 2022</footer>
   </body>
   <script src="./index.js"></script>
 </html>
