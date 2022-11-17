@@ -5,8 +5,7 @@
   font-family: "Montserrat", sans-serif;
 }
 .global-container {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
   display: flex;
   justify-content: center;
   margin: auto;
@@ -28,6 +27,7 @@ input {
   border: none;
 }
 .form {
+  position: relative;
   width: 40vh;
   height: 100vh;
   background-color: #eed6d3;
@@ -94,7 +94,9 @@ input {
   background-color: rgb(193, 126, 126);
 }
 .footer {
-  margin-top: 20rem;
+  position: absolute;
+  bottom: 1rem;
+
   font-weight: 600;
 }
 .fa-brands {
