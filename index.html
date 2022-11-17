@@ -4,13 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Library</title>
   </head>
   <body>
     <div class="global-container">
       <div class="form">
-        <h1>My library</h1>
+        <h1><i class="fa-solid fa-book"></i> My library</h1>
         <label>Title:</label>
         <input type="text" id="title" name="title" placeholder=" Book title" />
         <label>Author:</label>
@@ -28,10 +41,14 @@
           <option value="no">No</option>
         </select>
         <button class="button add">Add this book</button>
+        <footer class="footer">
+          By Mustafa for The Odin Project 2022
+          <a href="https://github.com/mustafa-bhm/library"></a>
+          <i class="fa-brands fa-github"></i>
+        </footer>
       </div>
-      <div>
+      <div class="right-side">
         <div class="library"></div>
-        <footer class="footer">By Mustafa for The Odin Project 2022</footer>
       </div>
     </div>
   </body>

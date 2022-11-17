@@ -43,7 +43,7 @@ function renderLibrary(addNewBookBool) {
     author.textContent = "Author: " + myLibrary[i].author;
     btn.className += myLibrary[i].index;
     title.textContent = "Title: " + myLibrary[i].title;
-    btn.textContent = "X";
+    btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
     read.textContent = "Status " + myLibrary[i].isRead;
 
     // append book info elemnts to the card contanier
@@ -96,6 +96,16 @@ function createNewBookObject() {
   const book = new Book(title, author, isRead);
   addBookToLibrary(book);
 }
+const theHobbit = new Book("The Hobbit", "J.R.R ", "Yes");
+const deepWork = new Book("The Foundation", "I.Assimov", "Yes");
+const theMartian = new Book("Don Quixote", "M. Cervantes", "No");
+
+addBookToLibrary(theHobbit);
+addBookToLibrary(deepWork);
+addBookToLibrary(theMartian);
+
+renderLibrary(false);
+
 //to push the book to the library [].
 function addBookToLibrary(book) {
   book.index = myLibrary.length;
