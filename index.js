@@ -11,21 +11,27 @@ class Book {
 }
 
 const library = document.querySelector(".library");
+let title = document.getElementById("title");
+let author = document.getElementById("author");
+let isRead = document.getElementById("isRead");
 
 //to get the form inputs  and display books
 const newBook = document.querySelector(".add");
 newBook.addEventListener("click", function () {
   renderLibrary(true);
+  title.value = "";
+  author.value = "";
+  isRead.value = "";
 });
 
 // to render myLibrary []
-function renderLibrary(addNewBookBool) {
+function renderLibrary(newBook) {
   // to clear content /child elemnts of library container before rendering from the mylibrary array
   removeChilElements(library);
 
   //  if a new book has been added , the fun creates a book object
   // else if the delete btn waas clicked we just render books from myLibrary []
-  if (addNewBookBool) {
+  if (newBook) {
     createNewBookObject();
   }
   //  create new elemwnts and appened them to the library container
@@ -89,13 +95,14 @@ function removeChilElements(parent) {
 
 //  to create new book object from the form  inputs
 function createNewBookObject() {
-  let title = document.getElementById("title").value;
-  let author = document.getElementById("author").value;
-  let isRead = document.getElementById("isRead").value;
+  let bookTitle = title.value;
+  let bookAuthor = author.value;
+  let isBookRead = isRead.value;
 
-  const book = new Book(title, author, isRead);
+  const book = new Book(bookTitle, bookAuthor, isBookRead);
   addBookToLibrary(book);
 }
+
 const theHobbit = new Book("The Hobbit", "J.R.R ", "Yes");
 const deepWork = new Book("The Foundation", "I.Assimov", "Yes");
 const theMartian = new Book("Don Quixote", "M. Cervantes", "No");
