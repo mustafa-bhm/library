@@ -104,12 +104,12 @@ function createNewBookObject() {
 }
 
 const theHobbit = new Book("The Hobbit", "J.R.R ", "Yes");
-const deepWork = new Book("The Foundation", "I.Assimov", "Yes");
-const theMartian = new Book("Don Quixote", "M. Cervantes", "No");
+const theFoundation = new Book("The Foundation", "I.Assimov", "Yes");
+const don = new Book("Don Quixote", "M. Cervantes", "No");
 
 addBookToLibrary(theHobbit);
-addBookToLibrary(deepWork);
-addBookToLibrary(theMartian);
+addBookToLibrary(theFoundation);
+addBookToLibrary(don);
 
 renderLibrary(false);
 
