@@ -29,12 +29,12 @@ function renderLibrary(newBook) {
   // to clear content /child elemnts of library container before rendering from the mylibrary array
   removeChilElements(library);
 
-  //  if a new book has been added , the fun creates a book object
-  // else if the delete btn waas clicked we just render books from myLibrary []
+  //  if a new book has been added , the function creates a book object
+  // else if the delete btn was clicked we just render books from myLibrary []
   if (newBook) {
     createNewBookObject();
   }
-  //  create new elemwnts and appened them to the library container
+  //  create new elements and appened them to the library container
   for (i = 0; i < myLibrary.length; i++) {
     const bookCard = document.createElement("div");
     bookCard.className = "card";
@@ -111,6 +111,7 @@ addBookToLibrary(theHobbit);
 addBookToLibrary(theFoundation);
 addBookToLibrary(don);
 
+// to render books from myLibrary array
 renderLibrary(false);
 
 //to push the book to the library [].
