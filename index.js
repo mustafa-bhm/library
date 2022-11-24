@@ -50,7 +50,7 @@ function renderLibrary(newBook) {
     btn.className += myLibrary[i].index;
     title.textContent = "Title: " + myLibrary[i].title;
     btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
-    read.textContent = "Status " + myLibrary[i].isRead;
+    read.textContent = "Read: " + myLibrary[i].isRead;
 
     // append book info elemnts to the card contanier
     bookCard.appendChild(btn);
