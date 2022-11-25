@@ -24,13 +24,14 @@
     <div class="global-container">
       <div class="form">
         <h1><i class="fa-solid fa-book"></i> My library</h1>
+
         <label>Title:</label>
         <input
+          required
           type="text"
           id="title"
           name="title"
           placeholder=" Book title"
-          required
         />
         <label>Author:</label>
         <input
@@ -38,14 +39,16 @@
           id="author"
           name="author"
           placeholder=" Author's name"
+          required
         />
 
         <label>Did you read this book ?</label>
-        <select id="isRead" name="isRead" class="input">
+        <select id="isRead" name="isRead" class="input" required>
           <option value="">Select an option</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>
+        <div id="error-message"></div>
         <button class="button add">Add this book</button>
 
         <footer class="footer">
