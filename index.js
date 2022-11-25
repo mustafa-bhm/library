@@ -14,6 +14,7 @@ const library = document.querySelector(".library");
 let title = document.getElementById("title");
 let author = document.getElementById("author");
 let isRead = document.getElementById("isRead");
+let errorMessage = document.getElementById("error-message");
 
 //to get the form inputs  and display books
 const newBook = document.querySelector(".add");
@@ -95,6 +96,9 @@ function removeChilElements(parent) {
 
 //  to create new book object from the form  inputs
 function createNewBookObject() {
+  if (title.value === "" || author.value === "" || isRead.value === "")
+    return (errorMessage.innerHTML = "Please fill in all fields");
+
   let bookTitle = title.value;
   let bookAuthor = author.value;
   let isBookRead = isRead.value;
